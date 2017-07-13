@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>GSACasesHelperClass</members>
+        <members>GSACaseTriggerHandler</members>
+        <members>GSACaseTriggerHandlerTest</members>
+        <members>DateCalculationsUtility</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>GSACasesTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>GSA_Cases__c.hoursBetween__c</members>
+        <members>GSA_Cases__c.Real_Time_in_Minutes__c</members>
+        <members>GSA_Cases__c.Realtime_in_Minutes__c</members>
+        <members>GSA_Cases__c.RealTime__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>38.0</version>
+</Package>
