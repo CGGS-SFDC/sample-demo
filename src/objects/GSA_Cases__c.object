@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>RealTime__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND( 10*( (5*FLOOR(( DATEVALUE(Date_Closed__c) -DATEVALUE(Date_Opened__c))/7)
++
+MIN(5,MOD(DATEVALUE( Date_Closed__c )-DATEVALUE(Date_Opened__c), 7) +
+MIN(1, 24/ 10*(MOD( Date_Closed__c -DATETIMEVALUE(&apos;1996-01-01 12:00:00&apos;), 1)))
+))
+
+-
+
+(5*FLOOR((DATEVALUE( Date_Closed__c )-DATEVALUE(Date_Opened__c))/7) +
+MIN(5,MOD(DATEVALUE( Date_Opened__c )-DATEVALUE(Date_Opened__c), 7) +
+MIN(1, 24/ 10 *(MOD( Date_Opened__c -DATETIMEVALUE(&apos;1996-01-01 12:00:00&apos;), 1)))
+))
+), 0) / 10</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RealTime</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Real_Time_in_Minutes__c</fullName>
+        <externalId>false</externalId>
+        <formula>hoursBetween__c * 60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Real Time in Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Realtime_in_Minutes__c</fullName>
+        <externalId>false</externalId>
+        <label>Realtime in Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>hoursBetween__c</fullName>
+        <externalId>false</externalId>
+        <label>hoursBetween</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
